@@ -31,6 +31,7 @@ static void mqtt_publisher_task(void *pvParameters)
             if (root != NULL) {
                 cJSON_AddNumberToObject(root, "temperature", round(sensor_data.temperature * 100) / 100);
                 cJSON_AddNumberToObject(root, "ticks", sensor_data.ticks);
+                cJSON_AddNumberToObject(root, "humidity", round(sensor_data.humidity * 100) / 100);
                 json_str = cJSON_PrintUnformatted(root);
                 cJSON_Delete(root);
             }

@@ -11,6 +11,7 @@
 typedef struct {
     TickType_t ticks;
     float temperature;
+    float humidity;
 } Sensor_t;
 
 extern QueueHandle_t sensor_queue;

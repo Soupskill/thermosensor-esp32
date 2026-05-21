@@ -1,2 +1,3 @@
 idf_component_register(SRCS "sensor.c"
-                       INCLUDE_DIRS "include")
+                       INCLUDE_DIRS "include"
+                    PRIV_REQUIRES esp-idf-lib__dht)
