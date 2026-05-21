@@ -10,6 +10,7 @@
 #include "mqtt_connection.h"
 #include "sensor.h"
 #include "network.h"
+#include "modbus.h"
 //#include "esp_modbus_common.h"
 //#include "esp_modbus_slave.h"
 
@@ -19,6 +20,6 @@ void app_main(void)
 {
     wifi_init_sta();
     sensor_start();
+    //init_modbus();
     mqtt_app_start();
-
 }
